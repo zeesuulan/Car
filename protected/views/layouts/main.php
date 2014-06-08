@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="charset=utf-8">
     <!-- blueprint CSS framework -->
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/cms.css">
     <title>
         <?php echo CHtml::encode($this->pageTitle); ?>
     </title>
@@ -12,37 +13,14 @@
 
 <body>
 
-    <div class="container">
+    <div id="wrap">
+        <ul class="nav nav-pills">
+            <span class="navbar-brand">
+                <?php echo CHtml::encode(Yii::app()->name); ?></span>
 
-        <div id="header">
-            <div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-        </div>
-        <!-- header -->
-
-        <div id="mainmenu">
-            <?php $this->widget('zii.widgets.CMenu',array( 'items'=>array( array('label'=>'Home', 'url'=>array('/site/index')), array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')), array('label'=>'Contact', 'url'=>array('/site/contact')), array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest), array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest) ), )); ?>
-        </div>
-        <!-- mainmenu -->
-        <?php if(isset($this->breadcrumbs)):?>
-        <?php $this->widget('zii.widgets.CBreadcrumbs', array( 'links'=>$this->breadcrumbs, )); ?>
-        <!-- breadcrumbs -->
-        <?php endif?>
-
-        <?php echo $content; ?>
-
-        <div class="clear"></div>
-
-        <div id="footer">
-            Copyright &copy;
-            <?php echo date( 'Y'); ?>by My Company.
-            <br/>All Rights Reserved.
-            <br/>
-            <?php echo Yii::powered(); ?>
-        </div>
-        <!-- footer -->
-
+            <?php $this->widget('application.widgets.CBNav', array('items' => array(array('label' => '首页', 'url' => array('/site/index')), array('label' => '管理预约', 'url' => array('/site/booking', 'view' => 'about')), array('label' => '员工管理', 'url' => array('/site/employee')), array('label' => '店面管理', 'url' => array('/site/store')), array('label' => '退出 ('.Yii::app() -> user -> name.')', 'url' => array('/site/employee'))))); ?>
+        </ul>
     </div>
-    <!-- page -->
 
 </body>
 
