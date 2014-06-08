@@ -614,3 +614,869 @@ REQUEST_URI=/site/index.html
 in E:\project\car\protected\widgets\CBNav.php (11)
 in E:\project\car\protected\views\layouts\main.php (21)
 in E:\project\car\protected\views\layouts\column1.php (6)
+2014/06/08 14:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/index.html
+---
+2014/06/08 14:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 14:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 14:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/index
+---
+2014/06/08 14:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 14:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "store".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('store')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('store')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/store')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/store
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 14:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/store
+---
+2014/06/08 14:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "store".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('store')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('store')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/store')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/store
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 14:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/store
+---
+2014/06/08 14:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 14:38:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/index
+---
+2014/06/08 14:38:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 14:38:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "store".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('store')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('store')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/store')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/store
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 14:38:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/store
+---
+2014/06/08 14:38:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 15:33:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/06/08 15:35:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/index
+---
+2014/06/08 15:35:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('member')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('member')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/member')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/member
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 15:35:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/member
+---
+2014/06/08 15:35:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "store".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('store')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('store')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/store')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/store
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 15:35:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/store
+---
+2014/06/08 15:39:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/index
+---
+2014/06/08 15:39:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('member')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('member')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/member')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/member
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 15:39:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/member
+---
+2014/06/08 15:39:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "store".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('store')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('store')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/store')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/store
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 15:39:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/store
+---
+2014/06/08 15:39:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('member')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('member')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/member')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/member
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 15:39:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/member
+---
+2014/06/08 15:39:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "store".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('store')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('store')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/store')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/store
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 15:39:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/store
+---
+2014/06/08 15:39:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('member')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('member')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/member')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/member
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 15:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/member
+---
+2014/06/08 15:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('member')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('member')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/member')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/member
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 15:43:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('member')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('member')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/member')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/member
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 15:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/member
+---
+2014/06/08 15:58:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 15:58:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 15:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 16:00:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site
+---
+2014/06/08 16:00:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:00:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:01:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:01:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:01:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "employee".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('employee')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('employee')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/employee')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/employee
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 16:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/employee
+---
+2014/06/08 16:06:11 [error] [php] Array to string conversion (E:\project\car\protected\widgets\CBSiderNav.php:10)
+Stack trace:
+#0 E:\project\car\protected\views\layouts\cmspage.php(6): MemberController->widget()
+#1 E:\project\yii\framework\web\CBaseController.php(126): require()
+#2 E:\project\yii\framework\web\CBaseController.php(95): MemberController->renderInternal()
+#3 E:\project\yii\framework\web\CController.php(784): MemberController->renderFile()
+#4 E:\project\car\protected\controllers\MemberController.php(128): MemberController->render()
+#5 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionIndex()
+#6 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\project\yii\framework\web\filters\CFilterChain.php(133): MemberController->runAction()
+#8 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\project\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\project\yii\framework\web\filters\CInlineFilter.php(58): MemberController->filterAccessControl()
+#11 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\project\yii\framework\web\CController.php(265): MemberController->runActionWithFilters()
+#14 E:\project\yii\framework\web\CWebApplication.php(282): MemberController->run()
+#15 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 E:\project\car\index.php(13): CWebApplication->run()
+REQUEST_URI=/member
+in E:\project\car\protected\widgets\CBSiderNav.php (10)
+in E:\project\car\protected\views\layouts\cmspage.php (6)
+in E:\project\car\protected\controllers\MemberController.php (128)
+2014/06/08 16:06:15 [error] [php] Array to string conversion (E:\project\car\protected\widgets\CBSiderNav.php:10)
+Stack trace:
+#0 E:\project\car\protected\views\layouts\cmspage.php(6): MemberController->widget()
+#1 E:\project\yii\framework\web\CBaseController.php(126): require()
+#2 E:\project\yii\framework\web\CBaseController.php(95): MemberController->renderInternal()
+#3 E:\project\yii\framework\web\CController.php(784): MemberController->renderFile()
+#4 E:\project\car\protected\controllers\MemberController.php(128): MemberController->render()
+#5 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionIndex()
+#6 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\project\yii\framework\web\filters\CFilterChain.php(133): MemberController->runAction()
+#8 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\project\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\project\yii\framework\web\filters\CInlineFilter.php(58): MemberController->filterAccessControl()
+#11 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\project\yii\framework\web\CController.php(265): MemberController->runActionWithFilters()
+#14 E:\project\yii\framework\web\CWebApplication.php(282): MemberController->run()
+#15 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 E:\project\car\index.php(13): CWebApplication->run()
+REQUEST_URI=/member
+in E:\project\car\protected\widgets\CBSiderNav.php (10)
+in E:\project\car\protected\views\layouts\cmspage.php (6)
+in E:\project\car\protected\controllers\MemberController.php (128)
+2014/06/08 16:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/create
+HTTP_REFERER=http://car.com/member
+---
+2014/06/08 16:11:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/member
+---
+2014/06/08 16:19:06 [error] [php] Undefined variable: router (E:\project\car\protected\widgets\CBSiderNav.php:11)
+Stack trace:
+#0 E:\project\car\protected\views\layouts\cmspage.php(6): MemberController->widget()
+#1 E:\project\yii\framework\web\CBaseController.php(126): require()
+#2 E:\project\yii\framework\web\CBaseController.php(95): MemberController->renderInternal()
+#3 E:\project\yii\framework\web\CController.php(784): MemberController->renderFile()
+#4 E:\project\car\protected\controllers\MemberController.php(128): MemberController->render()
+#5 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionIndex()
+#6 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\project\yii\framework\web\filters\CFilterChain.php(133): MemberController->runAction()
+#8 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\project\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\project\yii\framework\web\filters\CInlineFilter.php(58): MemberController->filterAccessControl()
+#11 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\project\yii\framework\web\CController.php(265): MemberController->runActionWithFilters()
+#14 E:\project\yii\framework\web\CWebApplication.php(282): MemberController->run()
+#15 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 E:\project\car\index.php(13): CWebApplication->run()
+REQUEST_URI=/member
+in E:\project\car\protected\widgets\CBSiderNav.php (11)
+in E:\project\car\protected\views\layouts\cmspage.php (6)
+in E:\project\car\protected\controllers\MemberController.php (128)
+2014/06/08 16:27:40 [error] [exception.CException] exception 'CException' with message 'Property "CBSiderNav.strcasecmp" is not defined.' in E:\project\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\project\car\protected\widgets\CBSiderNav.php(10): CComponent->__get('strcasecmp')
+#1 E:\project\yii\framework\web\CBaseController.php(147): CBSiderNav->init()
+#2 E:\project\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.wid...', Array)
+#3 E:\project\car\protected\views\layouts\cmspage.php(6): CBaseController->widget('application.wid...', Array)
+#4 E:\project\yii\framework\web\CBaseController.php(126): require('E:\\project\\car\\...')
+#5 E:\project\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\project\\car\\...', Array, true)
+#6 E:\project\yii\framework\web\CController.php(784): CBaseController->renderFile('E:\\project\\car\\...', Array, true)
+#7 E:\project\car\protected\controllers\MemberController.php(84): CController->render('create', Array)
+#8 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionCreate()
+#9 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('member/create')
+#19 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 E:\project\car\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/member/create
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 16:27:45 [error] [exception.CException] exception 'CException' with message 'Property "CBSiderNav.strcasecmp" is not defined.' in E:\project\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\project\car\protected\widgets\CBSiderNav.php(10): CComponent->__get('strcasecmp')
+#1 E:\project\yii\framework\web\CBaseController.php(147): CBSiderNav->init()
+#2 E:\project\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.wid...', Array)
+#3 E:\project\car\protected\views\layouts\cmspage.php(6): CBaseController->widget('application.wid...', Array)
+#4 E:\project\yii\framework\web\CBaseController.php(126): require('E:\\project\\car\\...')
+#5 E:\project\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\project\\car\\...', Array, true)
+#6 E:\project\yii\framework\web\CController.php(784): CBaseController->renderFile('E:\\project\\car\\...', Array, true)
+#7 E:\project\car\protected\controllers\MemberController.php(84): CController->render('create', Array)
+#8 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionCreate()
+#9 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('member/create')
+#19 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 E:\project\car\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/member/create
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 16:27:54 [error] [exception.CException] exception 'CException' with message 'Property "CBSiderNav.breadcrumbs" is not defined.' in E:\project\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\project\car\protected\widgets\CBSiderNav.php(10): CComponent->__get('breadcrumbs')
+#1 E:\project\yii\framework\web\CBaseController.php(147): CBSiderNav->init()
+#2 E:\project\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.wid...', Array)
+#3 E:\project\car\protected\views\layouts\cmspage.php(6): CBaseController->widget('application.wid...', Array)
+#4 E:\project\yii\framework\web\CBaseController.php(126): require('E:\\project\\car\\...')
+#5 E:\project\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\project\\car\\...', Array, true)
+#6 E:\project\yii\framework\web\CController.php(784): CBaseController->renderFile('E:\\project\\car\\...', Array, true)
+#7 E:\project\car\protected\controllers\MemberController.php(84): CController->render('create', Array)
+#8 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionCreate()
+#9 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('member/create')
+#19 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 E:\project\car\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/member/create
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 16:28:00 [error] [exception.CException] exception 'CException' with message 'Property "CBSiderNav.breadcrumbs" is not defined.' in E:\project\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\project\car\protected\widgets\CBSiderNav.php(10): CComponent->__get('breadcrumbs')
+#1 E:\project\yii\framework\web\CBaseController.php(147): CBSiderNav->init()
+#2 E:\project\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.wid...', Array)
+#3 E:\project\car\protected\views\layouts\cmspage.php(6): CBaseController->widget('application.wid...', Array)
+#4 E:\project\yii\framework\web\CBaseController.php(126): require('E:\\project\\car\\...')
+#5 E:\project\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\project\\car\\...', Array, true)
+#6 E:\project\yii\framework\web\CController.php(784): CBaseController->renderFile('E:\\project\\car\\...', Array, true)
+#7 E:\project\car\protected\controllers\MemberController.php(84): CController->render('create', Array)
+#8 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionCreate()
+#9 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('member/create')
+#19 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 E:\project\car\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/member/create
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 16:31:25 [error] [exception.CException] exception 'CException' with message 'MemberController and its behaviors do not have a method or closure named "getModel".' in E:\project\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\project\car\protected\widgets\CBSiderNav.php(10): CComponent->__call('getModel', Array)
+#1 E:\project\car\protected\widgets\CBSiderNav.php(10): MemberController->getModel()
+#2 E:\project\yii\framework\web\CBaseController.php(147): CBSiderNav->init()
+#3 E:\project\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.wid...', Array)
+#4 E:\project\car\protected\views\layouts\cmspage.php(6): CBaseController->widget('application.wid...', Array)
+#5 E:\project\yii\framework\web\CBaseController.php(126): require('E:\\project\\car\\...')
+#6 E:\project\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\project\\car\\...', Array, true)
+#7 E:\project\yii\framework\web\CController.php(784): CBaseController->renderFile('E:\\project\\car\\...', Array, true)
+#8 E:\project\car\protected\controllers\MemberController.php(84): CController->render('create', Array)
+#9 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionCreate()
+#10 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#19 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('member/create')
+#20 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 E:\project\car\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/member/create
+HTTP_REFERER=http://car.com/site/login.html
+---
+2014/06/08 16:40:11 [error] [php] Use of undefined constant url - assumed 'url' (E:\project\car\protected\widgets\CBNav.php:17)
+Stack trace:
+#0 E:\project\yii\framework\web\CBaseController.php(180): MemberController->createWidget()
+#1 E:\project\car\protected\views\layouts\main.php(20): MemberController->widget()
+#2 E:\project\yii\framework\web\CBaseController.php(126): require()
+#3 E:\project\yii\framework\web\CBaseController.php(95): MemberController->renderInternal()
+#4 E:\project\yii\framework\web\widgets\CContentDecorator.php(76): MemberController->renderFile()
+#5 E:\project\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#6 E:\project\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#7 E:\project\yii\framework\web\CBaseController.php(214): CContentDecorator->run()
+#8 E:\project\yii\framework\web\CBaseController.php(308): MemberController->endWidget()
+#9 E:\project\car\protected\views\layouts\cmspage.php(9): MemberController->endContent()
+#10 E:\project\yii\framework\web\CBaseController.php(126): require()
+#11 E:\project\yii\framework\web\CBaseController.php(95): MemberController->renderInternal()
+#12 E:\project\yii\framework\web\CController.php(784): MemberController->renderFile()
+#13 E:\project\car\protected\controllers\MemberController.php(84): MemberController->render()
+#14 E:\project\yii\framework\web\actions\CInlineAction.php(49): MemberController->actionCreate()
+#15 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 E:\project\yii\framework\web\filters\CFilterChain.php(133): MemberController->runAction()
+#17 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 E:\project\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 E:\project\yii\framework\web\filters\CInlineFilter.php(58): MemberController->filterAccessControl()
+#20 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 E:\project\yii\framework\web\CController.php(265): MemberController->runActionWithFilters()
+#23 E:\project\yii\framework\web\CWebApplication.php(282): MemberController->run()
+#24 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#26 E:\project\car\index.php(13): CWebApplication->run()
+REQUEST_URI=/member/create
+in E:\project\car\protected\widgets\CBNav.php (17)
+in E:\project\car\protected\widgets\CBNav.php (11)
+in E:\project\car\protected\views\layouts\main.php (20)
+2014/06/08 16:43:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/member/create
+---
+2014/06/08 16:43:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:43:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:43:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:44:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "booking".' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site/booking
+---
+2014/06/08 16:44:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\project\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('member/view')
+#10 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 E:\project\car\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/member/view
+HTTP_REFERER=http://car.com/member/create
+---
+2014/06/08 16:44:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\project\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('member/view')
+#10 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 E:\project\car\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/member/view
+HTTP_REFERER=http://car.com/member/create
+---
