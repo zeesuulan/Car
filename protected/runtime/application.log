@@ -6,3 +6,57 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/06/08 13:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrape.css".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrape....')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/bootstrape.css
+HTTP_REFERER=http://car.com/site/index.html
+---
+2014/06/08 13:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrape.css".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrape....')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/bootstrape.css
+HTTP_REFERER=http://car.com/site/index.html
+---
+2014/06/08 13:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrape.css".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrape....')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/bootstrape.css
+HTTP_REFERER=http://car.com/site/index.html
+---
+2014/06/08 13:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrape.css".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrape....')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/bootstrape.css
+HTTP_REFERER=http://car.com/css/bootstrape.css
+---
+2014/06/08 13:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/bootstrap.css
+HTTP_REFERER=http://car.com/site/index.html
+---
+2014/06/08 13:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css".' in E:\project\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\project\car\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/bootstrap.css
+HTTP_REFERER=http://car.com/css/bootstrap.css
+---
