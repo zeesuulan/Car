@@ -1,52 +1,51 @@
-<?php
-/* @var $this MemberController */
-/* @var $model Member */
-/* @var $form CActiveForm */
-?>
+<?php /* @var $this MemberController */ /* @var $model Member */ /* @var $form CActiveForm */ ?>
 
-<div class="form">
+<div class="form col-sm-6 col-sm-offset-3">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'member-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+    <?php $form=$this->beginWidget('CActiveForm', array( 'id'=>'member-form', 'enableAjaxValidation'=>false)); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">Fields with
+        <span class="required">*</span>are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+    <?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'member_num'); ?>
-		<?php echo $form->textField($model,'member_num',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'member_num'); ?>
-	</div>
+    <div class="form-group">
+        <?php echo $form->labelEx($model,'member_num'); ?>
+        <?php echo $form->textField($model,'member_num',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->error($model,'member_num'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'password'); ?>
-	</div>
+    <div class="form-group">
+        <?php echo $form->labelEx($model,'password'); ?>
+        <?php echo $form->passwordField($model,'password',array('size'=>15,'maxlength'=>15)); ?>
+        <?php echo $form->error($model,'password'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'dl_id'); ?>
-		<?php echo $form->textField($model,'dl_id'); ?>
-		<?php echo $form->error($model,'dl_id'); ?>
-	</div>
+    <div class="form-group">
+        <?php echo $form->labelEx($model,'dl_id'); ?>
+        <?php echo $form->textField($model,'dl_id'); ?>
+        <?php echo $form->error($model,'dl_id'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'origin_id'); ?>
-		<?php echo $form->textField($model,'origin_id'); ?>
-		<?php echo $form->error($model,'origin_id'); ?>
-	</div>
+    <div class="form-group">
+        <?php echo $form->labelEx($model,'origin_id'); ?>
+        <?php echo $form->dropDownList($model, 'origin_id', $origin_list); ?>
+        <?php echo $form->error($model,'origin_id'); ?>
+    </div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+    <div class="form-group buttons">
+        <?php echo CHtml::submitButton($model->isNewRecord ? '激活' : '修改'); ?>
+    </div>
 
-<?php $this->endWidget(); ?>
+    <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+<!-- form -->
+<script type="text/javascript">
+$(function() {
+    $("input").addClass("form-control")
+    $("input[type=submit]").removeClass("form-control").addClass("btn btn-default")
+    $("label").addClass("control-label")
+    $("select").addClass("form-control").css({"width": "20%", "display":"inline-block", "margin-left":"20px"})
+})
+</script>

@@ -1,23 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "{{_member}}".
+ * This is the model class for table "{{_member_origin}}".
  *
- * The followings are the available columns in table '{{_member}}':
+ * The followings are the available columns in table '{{_member_origin}}':
  * @property integer $id
- * @property string $member_num
- * @property string $password
- * @property integer $dl_id
- * @property integer $origin_id
+ * @property string $name
  */
-class Member extends CActiveRecord
+class MemberOrigin extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return '{{_member}}';
+		return '{{_member_origin}}';
 	}
 
 	/**
@@ -28,13 +25,11 @@ class Member extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('member_num, password, dl_id, origin_id', 'required'),
-			array('dl_id, origin_id', 'numerical', 'integerOnly'=>true),
-			array('member_num', 'length', 'max'=>20),
-			array('password', 'length', 'max'=>15),
+			array('name', 'required'),
+			array('name', 'length', 'max'=>30),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, member_num, dl_id, origin_id', 'safe', 'on'=>'search'),
+			array('id, name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,7 +41,7 @@ class Member extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			"origin_id" => array(self::BELONGS_TO, 'MemberOrigin', 'id')
+			
 		);
 	}
 
@@ -56,11 +51,8 @@ class Member extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => '用户id',
-			'member_num' => '会员卡号',
-			'password' => '密码',
-			'dl_id' => '驾驶证',
-			'origin_id' => '用户渠道',
+			'id' => '渠道ID',
+			'name' => '渠道名称',
 		);
 	}
 
@@ -83,10 +75,7 @@ class Member extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('member_num',$this->member_num,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('dl_id',$this->dl_id);
-		$criteria->compare('origin_id',$this->origin_id);
+		$criteria->compare('name',$this->name,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -97,7 +86,7 @@ class Member extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Member the static model class
+	 * @return MemberOrigin the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

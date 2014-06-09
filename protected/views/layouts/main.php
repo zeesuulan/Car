@@ -6,6 +6,8 @@
     <!-- blueprint CSS framework -->
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/cms.css">
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
     <title>
         <?php echo CHtml::encode($this->pageTitle); ?>
     </title>
@@ -22,19 +24,17 @@
         <?php $this->widget('application.widgets.CBSiderNav', array( 'items'=>$this->menu )); ?>
         <div class="main_container clearfix">
             <div class="container">
-            <?php echo $content; ?>
+                <?php echo $content; ?>
             </div>
         </div>
 
     </div>
     <div class="footer">
         Copyright &copy;
-        <?php echo date( 'Y'); ?>by
-        <?php echo CHtml::encode($this->pageTitle); ?>.
+        <?php echo date( 'Y'); ?> by 嘉通车友管理系统
         <br/>All Rights Reserved.
         <br/>Powered by Ice
     </div>
 </body>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+
 </html>

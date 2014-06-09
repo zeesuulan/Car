@@ -9,8 +9,8 @@ class MemberController extends Controller
 	public $layout='//layouts/cmspage';
 
 	public $menu=array(
-		array('label'=>'激活会员', 'url'=>array('create')),
 		array('label'=>'会员列表', 'url'=>array('index')),
+		array('label'=>'激活会员', 'url'=>array('create'))
 	);
 
 	/**
@@ -68,9 +68,13 @@ class MemberController extends Controller
 	public function actionCreate()
 	{
 		$model=new Member;
-
+		$origin_model = new MemberOrigin;
+		$origin_list = array();
+		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
+			$origin_list[$_model->attributes['id']] = $_model->attributes['name'];
+		}
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Member']))
 		{
@@ -81,6 +85,7 @@ class MemberController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
+			'origin_list' =>$origin_list
 		));
 	}
 
@@ -93,8 +98,7 @@ class MemberController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Member']))
 		{
@@ -169,6 +173,7 @@ class MemberController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
+
 		if(isset($_POST['ajax']) && $_POST['ajax']==='member-form')
 		{
 			echo CActiveForm::validate($model);
