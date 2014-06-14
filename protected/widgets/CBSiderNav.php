@@ -1,5 +1,5 @@
 <?php
-
+//bootstrasp sider nav
 class CBSiderNav extends CWidget
 {
 	public $items=array();

@@ -1,6 +1,6 @@
 <?php
 
-class MemberController extends Controller
+class StoreController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -9,10 +9,9 @@ class MemberController extends Controller
 	public $layout='//layouts/cmspage';
 
 	public $menu=array(
-		array('label'=>'会员列表', 'url'=>array('index')),
-		array('label'=>'激活会员', 'url'=>array('create'))
+		array('label'=>'门店列表', 'url'=>array('/store/index')),
+		array('label'=>'管理门店', 'url'=>array('/store/create'))
 	);
-
 	/**
 	 * @return array action filters
 	 */
@@ -38,7 +37,7 @@ class MemberController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'users'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -67,25 +66,20 @@ class MemberController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Member;
-		$origin_model = new MemberOrigin;
-		$origin_list = array();
-		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
-			$origin_list[$_model->attributes['id']] = $_model->attributes['name'];
-		}
-		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		$model=new Store;
 
-		if(isset($_POST['Member']))
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Store']))
 		{
-			$model->attributes=$_POST['Member'];
+			$model->attributes=$_POST['Store'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
-			'origin_list' =>$origin_list
 		));
 	}
 
@@ -98,11 +92,12 @@ class MemberController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		$this->performAjaxValidation($model);
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Member']))
+		if(isset($_POST['Store']))
 		{
-			$model->attributes=$_POST['Member'];
+			$model->attributes=$_POST['Store'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -131,19 +126,9 @@ class MemberController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria = new CDbCriteria;
-		$criteria->select = "id, member_num, origin_id, dl_id";
-		$dataProvider=new CActiveDataProvider('Member', array(
-			"criteria" => $criteria,
-			'sort'=>array( 
-	            'defaultOrder'=>'id ASC', 
-	        ), 
-	        'pagination'=>array( 
-	            'pageSize'=>5 
-	        )
-		));
+		$dataProvider=new CActiveDataProvider('Store');
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider
+			'dataProvider'=>$dataProvider,
 		));
 	}
 
@@ -152,10 +137,10 @@ class MemberController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Member('search');
+		$model=new Store('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Member']))
-			$model->attributes=$_GET['Member'];
+		if(isset($_GET['Store']))
+			$model->attributes=$_GET['Store'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -166,12 +151,12 @@ class MemberController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Member the loaded model
+	 * @return Store the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Member::model()->findByPk($id);
+		$model=Store::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -179,12 +164,11 @@ class MemberController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Member $model the model to be validated
+	 * @param Store $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-
-		if(isset($_POST['ajax']) && $_POST['ajax']==='member-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='store-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

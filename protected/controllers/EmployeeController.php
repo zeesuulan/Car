@@ -1,6 +1,6 @@
 <?php
 
-class MemberController extends Controller
+class EmployeeController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -9,8 +9,8 @@ class MemberController extends Controller
 	public $layout='//layouts/cmspage';
 
 	public $menu=array(
-		array('label'=>'会员列表', 'url'=>array('index')),
-		array('label'=>'激活会员', 'url'=>array('create'))
+		array('label'=>'员工列表', 'url'=>array('index')),
+		array('label'=>'创建员工', 'url'=>array('create'))
 	);
 
 	/**
@@ -67,25 +67,26 @@ class MemberController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Member;
-		$origin_model = new MemberOrigin;
-		$origin_list = array();
-		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
-			$origin_list[$_model->attributes['id']] = $_model->attributes['name'];
+		$model=new Employee;
+
+		$store_model = new store;
+		$store_list = array();
+		foreach($store_model->findAll(array("select"=>"id, name")) as $_model) {
+			$store_list[$_model->attributes['id']] = $_model->attributes['name'];
 		}
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Member']))
+		if(isset($_POST['Employee']))
 		{
-			$model->attributes=$_POST['Member'];
+			$model->attributes=$_POST['Employee'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
-			'origin_list' =>$origin_list
+			'store_list' => $store_list
 		));
 	}
 
@@ -98,11 +99,12 @@ class MemberController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		$this->performAjaxValidation($model);
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Member']))
+		if(isset($_POST['Employee']))
 		{
-			$model->attributes=$_POST['Member'];
+			$model->attributes=$_POST['Employee'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -131,19 +133,9 @@ class MemberController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria = new CDbCriteria;
-		$criteria->select = "id, member_num, origin_id, dl_id";
-		$dataProvider=new CActiveDataProvider('Member', array(
-			"criteria" => $criteria,
-			'sort'=>array( 
-	            'defaultOrder'=>'id ASC', 
-	        ), 
-	        'pagination'=>array( 
-	            'pageSize'=>5 
-	        )
-		));
+		$dataProvider=new CActiveDataProvider('Employee');
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider
+			'dataProvider'=>$dataProvider,
 		));
 	}
 
@@ -152,10 +144,10 @@ class MemberController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Member('search');
+		$model=new Employee('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Member']))
-			$model->attributes=$_GET['Member'];
+		if(isset($_GET['Employee']))
+			$model->attributes=$_GET['Employee'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -166,12 +158,12 @@ class MemberController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Member the loaded model
+	 * @return Employee the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Member::model()->findByPk($id);
+		$model=Employee::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -179,12 +171,11 @@ class MemberController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Member $model the model to be validated
+	 * @param Employee $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-
-		if(isset($_POST['ajax']) && $_POST['ajax']==='member-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='employee-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
