@@ -7,7 +7,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'store-form',
-	'enableAjaxValidation'=>true,
+	'enableAjaxValidation'=>false,
 )); ?>
 
 	<p class="note">带<span class="required">*</span>号必填</p>

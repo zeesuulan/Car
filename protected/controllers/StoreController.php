@@ -127,7 +127,15 @@ class StoreController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Store');
+		$dataProvider=new CActiveDataProvider('Store', array(  
+        'pagination'=>array(  
+            'pageSize'=>5,  
+            'pageVar'=>'page',  
+        ),  
+        'sort'=>array(  
+            'defaultOrder'=>'id',  
+            ),  
+        ));  
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
