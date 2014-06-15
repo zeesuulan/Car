@@ -13,6 +13,16 @@ class EmployeeController extends Controller
 		array('label'=>'创建员工', 'url'=>array('/employee/create'))
 	);
 
+	public $store_list;
+	
+	public function init(){
+		$store_model = new Store;
+		$this->store_list = array();
+		foreach($store_model->findAll(array("select"=>"id, name")) as $_model) {
+			$this->store_list[$_model->attributes['id']] = $_model->attributes['name'];
+		}
+	}
+
 	/**
 	 * @return array action filters
 	 */
@@ -69,11 +79,6 @@ class EmployeeController extends Controller
 	{
 		$model=new Employee;
 
-		$store_model = new store;
-		$store_list = array();
-		foreach($store_model->findAll(array("select"=>"id, name")) as $_model) {
-			$store_list[$_model->attributes['id']] = $_model->attributes['name'];
-		}
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
@@ -86,7 +91,7 @@ class EmployeeController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
-			'store_list' => $store_list
+			'store_list' => $this->store_list
 		));
 	}
 
@@ -98,9 +103,8 @@ class EmployeeController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Employee']))
 		{
@@ -111,6 +115,7 @@ class EmployeeController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+			'store_list' => $this->store_list
 		));
 	}
 
@@ -133,7 +138,15 @@ class EmployeeController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Employee');
+		$dataProvider=new CActiveDataProvider('Employee', array(
+        'pagination'=>array(  
+            'pageSize'=>10,  
+            'pageVar'=>'page',  
+        ),
+        'sort'=>array(  
+            'defaultOrder'=>'id',  
+            ),  
+        ));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>View Employee #<?php echo $model->id; ?></h1>
-
+<h1>员工信息</h1>
+<?php echo CHtml::link('修改员工信息',array('employee/update' , 'id'=>$model->id))?>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(

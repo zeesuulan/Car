@@ -8,6 +8,5 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Create Employee</h1>
-
+<h1>创建员工信息</h1>
 <?php $this->renderPartial('_form', array('model'=>$model,'store_list' =>$store_list)); ?>

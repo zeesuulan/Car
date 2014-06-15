@@ -26,7 +26,7 @@
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'phone'); ?>
-		<?php echo $form->textArea($model,'phone'); ?>
+		<?php echo $form->textField($model,'phone'); ?>
 		<?php echo $form->error($model,'phone'); ?>
 	</div>
 
@@ -35,6 +35,7 @@
         <?php echo $form->dropDownList($model, 'store_id', $store_list); ?>
 		<?php echo $form->error($model,'store_id'); ?>
 	</div>
+	
 	<p class="note">带<span class="required">*</span>号必填</p>
 	
 	<div class="form-group buttons">

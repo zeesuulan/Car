@@ -39,12 +39,11 @@ class Employee extends CActiveRecord
 	 * @return array relational rules.
 	 */
 	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-		);
-	}
+    {
+        return array(
+            'store'=>array(self::BELONGS_TO, 'Store', 'store_id')
+        );
+    }
 
 	/**
 	 * @return array customized attribute labels (name=>label)
@@ -54,7 +53,8 @@ class Employee extends CActiveRecord
 		return array(
 			'id' => '员工id',
 			'name' => '员工姓名',
-			'store_id' => '门店ID',
+			'store_id' => '门店',
+			'store.name' => '门店名称',
 			'phone' => '联系电话',
 		);
 	}
