@@ -31,7 +31,7 @@ class Employee extends CActiveRecord
 			array('store_id, phone', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, store_id, phone', 'safe', 'on'=>'search'),
+			array('id, name, store_id, store, phone, ', 'safe',  'on'=>'search'),
 		);
 	}
 
@@ -80,10 +80,17 @@ class Employee extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('store_id',$this->store_id);
-		$criteria->compare('phone',$this->phone);
+		$criteria->compare('phone',$this->phone, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+	        'pagination'=>array(  
+	            'pageSize'=>0,  
+	            'pageVar'=>'page',  
+	        ),
+	        'sort'=>array(  
+	            'defaultOrder'=>'id',  
+	            ),  
 		));
 	}
 

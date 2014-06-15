@@ -15,7 +15,7 @@ $this->breadcrumbs=array(
 	'attributes'=>array(
 		'id',
 		'name',
-		'store_id',
+		'store.name',
 		'phone',
 	),
 )); ?>

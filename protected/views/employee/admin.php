@@ -3,13 +3,8 @@
 /* @var $model Employee */
 
 $this->breadcrumbs=array(
-	'Employees'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Employee', 'url'=>array('index')),
-	array('label'=>'Create Employee', 'url'=>array('create')),
+	'员工管理'=>array('index'),
+	'管理员工信息',
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -25,18 +20,28 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-
-<h1>Manage Employees</h1>
+<style>
+	#employee-grid_c0{
+		width: 10%;
+	}
+	#employee-grid_c1{
+		width: 20%;
+	}
+	#employee-grid_c3{
+		width: 20%;
+	}
+</style>
+<h1>管理员工信息</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+可以通过表格中的输入快速搜索想要找的数据信息
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('按照店面搜索','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
+	'store_list' => $this->store_list
 )); ?>
 </div><!-- search-form -->
 
@@ -44,13 +49,24 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'employee-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'template'=>'{pager}{summary}{items}{pager}',
 	'columns'=>array(
 		'id',
 		'name',
-		'store_id',
+		'store.name',
 		'phone',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
 )); ?>
+<script type="text/javascript">
+$(function() {
+    $("input").addClass("form-control")
+    $("input[type=submit]").removeClass("form-control").addClass("btn btn-default")
+    $("label").addClass("control-label col-sm-2")
+    $("form").addClass("form-horizontal")
+    $(".row").addClass("form-group")
+    $("select").addClass("form-control").css({"width": "20%", "display":"inline-block", "margin-left":"20px"})
+})
+</script>

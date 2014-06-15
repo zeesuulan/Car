@@ -13,8 +13,8 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('store_id')); ?>:</b>
-	<?php echo CHtml::encode($data->store_id); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('store.name')); ?>:</b>
+	<?php echo CHtml::encode($data["store.name"]); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('phone')); ?>:</b>

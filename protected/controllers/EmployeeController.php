@@ -10,7 +10,8 @@ class EmployeeController extends Controller
 
 	public $menu=array(
 		array('label'=>'员工列表', 'url'=>array('/employee/index')),
-		array('label'=>'创建员工', 'url'=>array('/employee/create'))
+		array('label'=>'创建员工', 'url'=>array('/employee/create')),
+		array('label'=>'管理员工信息', 'url'=>array('/employee/admin'))
 	);
 
 	public $store_list;
@@ -164,6 +165,7 @@ class EmployeeController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'store_list' => $this->store_list
 		));
 	}
 
