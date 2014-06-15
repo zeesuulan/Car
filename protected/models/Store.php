@@ -27,6 +27,7 @@ class Store extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('address, name', 'required'),
+			array('name', 'unique'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, address, name', 'safe', 'on'=>'search'),

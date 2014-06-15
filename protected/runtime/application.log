@@ -3900,3 +3900,81 @@ REQUEST_URI=/employee/admin?Employee%5Bid%5D=&Employee%5Bname%5D=&Employee%5Bsto
 in E:\project\car\protected\models\Employee.php (82)
 in E:\project\car\protected\views\employee\admin.php (50)
 in E:\project\car\protected\controllers\EmployeeController.php (168)
+2014/06/15 10:35:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'name'. The SQL statement executed was: INSERT INTO `car_employee` (`name`, `phone`, `store_id`) VALUES (:yp0, :yp1, :yp2).
+in E:\project\car\protected\controllers\EmployeeController.php (89)
+in E:\project\car\index.php (13)
+2014/06/15 10:35:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'name'. The SQL statement executed was: INSERT INTO `car_employee` (`name`, `phone`, `store_id`) VALUES (:yp0, :yp1, :yp2)' in E:\project\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 E:\project\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 E:\project\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 E:\project\car\protected\controllers\EmployeeController.php(89): CActiveRecord->save()
+#3 E:\project\yii\framework\web\actions\CInlineAction.php(49): EmployeeController->actionCreate()
+#4 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('employee/create')
+#14 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 E:\project\car\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/employee/create
+HTTP_REFERER=http://car.com/employee/create
+---
+2014/06/15 10:35:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'name'. The SQL statement executed was: INSERT INTO `car_employee` (`name`, `phone`, `store_id`) VALUES (:yp0, :yp1, :yp2).
+in E:\project\car\protected\controllers\EmployeeController.php (89)
+in E:\project\car\index.php (13)
+2014/06/15 10:35:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'name'. The SQL statement executed was: INSERT INTO `car_employee` (`name`, `phone`, `store_id`) VALUES (:yp0, :yp1, :yp2)' in E:\project\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 E:\project\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 E:\project\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 E:\project\car\protected\controllers\EmployeeController.php(89): CActiveRecord->save()
+#3 E:\project\yii\framework\web\actions\CInlineAction.php(49): EmployeeController->actionCreate()
+#4 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('employee/create')
+#14 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 E:\project\car\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/employee/create
+HTTP_REFERER=http://car.com/employee/create
+---
+2014/06/15 10:36:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'name'. The SQL statement executed was: UPDATE `car_employee` SET `id`=:yp0, `name`=:yp1, `store_id`=:yp2, `phone`=:yp3 WHERE `car_employee`.`id`=1.
+in E:\project\car\protected\controllers\EmployeeController.php (113)
+in E:\project\car\index.php (13)
+2014/06/15 10:36:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'name'. The SQL statement executed was: UPDATE `car_employee` SET `id`=:yp0, `name`=:yp1, `store_id`=:yp2, `phone`=:yp3 WHERE `car_employee`.`id`=1' in E:\project\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 E:\project\yii\framework\db\ar\CActiveRecord.php(1751): CDbCommand->execute()
+#1 E:\project\yii\framework\db\ar\CActiveRecord.php(1127): CActiveRecord->updateByPk('1', Array)
+#2 E:\project\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->update(NULL)
+#3 E:\project\car\protected\controllers\EmployeeController.php(113): CActiveRecord->save()
+#4 [internal function]: EmployeeController->actionUpdate('1')
+#5 E:\project\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(EmployeeController), Array)
+#6 E:\project\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(EmployeeController), Object(ReflectionMethod), Array)
+#7 E:\project\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\project\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 E:\project\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 E:\project\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 E:\project\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 E:\project\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 E:\project\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 E:\project\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#16 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('employee/update')
+#17 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 E:\project\car\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/employee/update/1.html
+HTTP_REFERER=http://car.com/employee/update/1.html
+---

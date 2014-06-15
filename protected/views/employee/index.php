@@ -13,5 +13,5 @@ $this->breadcrumbs=array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_list',
 	'ajaxUpdate'=>false,
-	'template'=>'{sorter}{pager}{summary}{items}{pager}',
+	'template'=>'{sorter}{pager}{items}{summary}',
  )); ?>

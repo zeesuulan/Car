@@ -28,6 +28,7 @@ class Employee extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, store_id, phone', 'required'),
+			array('name', 'unique'),
 			array('store_id, phone', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

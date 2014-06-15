@@ -13,7 +13,7 @@ $this->breadcrumbs=array(
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'ajaxUpdate'=>false,
-	'template'=>'{sorter}{pager}{summary}{items}{pager}',
+	'template'=>'{sorter}{pager}{items}{summary}',
 	'itemView'=>'_list',
 	'pager'=>array(  
                 'maxButtonCount'=>'7',  

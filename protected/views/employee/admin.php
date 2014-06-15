@@ -49,7 +49,7 @@ $('.search-form form').submit(function(){
 	'id'=>'employee-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
-	'template'=>'{pager}{summary}{items}{pager}',
+	'template'=>'{pager}{items}{summary}',
 	'columns'=>array(
 		'id',
 		'name',
