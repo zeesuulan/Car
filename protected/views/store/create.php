@@ -3,16 +3,11 @@
 /* @var $model Store */
 
 $this->breadcrumbs=array(
-	'Stores'=>array('index'),
-	'Create',
+	'店面列表'=>array('index'),
+	'新增店面信息',
 );
 
-$this->menu=array(
-	array('label'=>'List Store', 'url'=>array('index')),
-	array('label'=>'Manage Store', 'url'=>array('admin')),
-);
+
 ?>
-
-<h1>Create Store</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

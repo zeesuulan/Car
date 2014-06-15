@@ -4,30 +4,30 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="wide form">
+<div class="form search_form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
-
-	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
-
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->label($model,'address'); ?>
-		<?php echo $form->textArea($model,'address',array('rows'=>6, 'cols'=>50)); ?>
+		<div class="col-sm-10">
+			<?php echo $form->textField($model,'address',array('rows'=>6, 'cols'=>50)); ?>
+		</div>
 	</div>
 
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textArea($model,'name',array('rows'=>6, 'cols'=>50)); ?>
+		<div class="col-sm-10">
+			<?php echo $form->textField($model,'name',array('rows'=>6, 'cols'=>50)); ?>
+		</div>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<div class="form-group buttons">
+		<div class="col-sm-offset-2 col-sm-10">
+			<?php echo CHtml::submitButton('搜索'); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>

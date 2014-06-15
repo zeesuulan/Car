@@ -9,8 +9,9 @@ class StoreController extends Controller
 	public $layout='//layouts/cmspage';
 
 	public $menu=array(
-		array('label'=>'门店列表', 'url'=>array('/store/index')),
-		array('label'=>'管理门店', 'url'=>array('/store/create'))
+		array('label'=>'店面列表', 'url'=>array('/store/index')),
+		array('label'=>'新增店面信息', 'url'=>array('/store/create')),
+		array('label'=>'管理店面信息', 'url'=>array('/store/admin'))
 	);
 	/**
 	 * @return array action filters

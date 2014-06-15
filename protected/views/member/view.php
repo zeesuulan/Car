@@ -13,7 +13,6 @@ $this->breadcrumbs=array(
 	'attributes'=>array(
 		'id',
 		'member_num',
-		'password',
 		'dl_id',
 		'origin_id',
 	),

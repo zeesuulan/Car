@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="form col-sm-6 col-sm-offset-3">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'employee-form',
@@ -15,7 +15,6 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -26,17 +25,18 @@
 	</div>
 
 	<div class="form-group">
-		<?php echo $form->labelEx($model,'store_id'); ?>
-        <?php echo $form->dropDownList($model, 'store_id', $store_list); ?>
-		<?php echo $form->error($model,'store_id'); ?>
-	</div>
-
-	<div class="form-group">
 		<?php echo $form->labelEx($model,'phone'); ?>
-		<?php echo $form->textField($model,'phone'); ?>
+		<?php echo $form->textArea($model,'phone'); ?>
 		<?php echo $form->error($model,'phone'); ?>
 	</div>
 
+	<div class="form-group">
+		<label for="Employee_store_id" class="required control-label">所在门店 <span class="required">*</span></label>
+        <?php echo $form->dropDownList($model, 'store_id', $store_list); ?>
+		<?php echo $form->error($model,'store_id'); ?>
+	</div>
+	<p class="note">带<span class="required">*</span>号必填</p>
+	
 	<div class="form-group buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? '保存' : '修改'); ?>
 	</div>
@@ -44,3 +44,11 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<script type="text/javascript">
+$(function() {
+    $("input").addClass("form-control")
+    $("input[type=submit]").removeClass("form-control").addClass("btn btn-default")
+    $("label").addClass("control-label")
+    $("select").addClass("form-control").css({"width": "20%", "display":"inline-block", "margin-left":"20px"})
+})
+</script>

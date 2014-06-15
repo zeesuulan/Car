@@ -3,19 +3,12 @@
 /* @var $model Store */
 
 $this->breadcrumbs=array(
-	'Stores'=>array('index'),
+	'店面列表'=>array('index'),
 	$model->name=>array('view','id'=>$model->id),
-	'Update',
-);
-
-$this->menu=array(
-	array('label'=>'List Store', 'url'=>array('index')),
-	array('label'=>'Create Store', 'url'=>array('create')),
-	array('label'=>'View Store', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Store', 'url'=>array('admin')),
+	'修改店面信息',
 );
 ?>
 
-<h1>Update Store <?php echo $model->id; ?></h1>
+<h4>修改店面<span class="info_title"><?php echo $model->name; ?></span>的信息</h4>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

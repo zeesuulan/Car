@@ -3,38 +3,48 @@
 /* @var $model Store */
 /* @var $form CActiveForm */
 ?>
-
-<div class="form">
+<div class="form col-sm-6 col-sm-offset-3">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'store-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">带<span class="required">*</span>号必填</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'address'); ?>
-		<?php echo $form->textArea($model,'address',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'address'); ?>
-	</div>
-
-	<div class="row">
+	<div class="form-group">
 		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textArea($model,'name',array('rows'=>6, 'cols'=>50)); ?>
+		<div class="col-sm-10">
+			<?php echo $form->textField($model,'name',array('rows'=>6, 'cols'=>50)); ?>
+		</div>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'address'); ?>
+		<div class="col-sm-10">
+			<?php echo $form->textField($model,'address',array('rows'=>6, 'cols'=>50)); ?>
+		</div>
+		<?php echo $form->error($model,'address'); ?>
+	</div>
+
+	<div class="form-group buttons">
+		<div class="col-sm-offset-2 col-sm-10">
+			<?php echo CHtml::submitButton($model->isNewRecord ? '创建' : '保存'); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<script type="text/javascript">
+$(function() {
+    $("input").addClass("form-control")
+    $("input[type=submit]").removeClass("form-control").addClass("btn btn-default")
+    $("label").addClass("control-label col-sm-2")
+    $("form").addClass("form-horizontal")
+    $("select").addClass("form-control").css({"width": "20%", "display":"inline-block", "margin-left":"20px"})
+})
+</script>

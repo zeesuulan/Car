@@ -24,6 +24,10 @@
         <?php $this->widget('application.widgets.CBSiderNav', array( 'items'=>$this->menu )); ?>
         <div class="main_container clearfix">
             <div class="container">
+                <?php if(isset($this->breadcrumbs)):?>
+                    <?php $this->widget('zii.widgets.CBreadcrumbs', array( 'links'=>$this->breadcrumbs, )); ?>
+                    <!-- breadcrumbs -->
+                <?php endif?>
                 <?php echo $content; ?>
             </div>
         </div>

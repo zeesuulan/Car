@@ -9,8 +9,8 @@ class EmployeeController extends Controller
 	public $layout='//layouts/cmspage';
 
 	public $menu=array(
-		array('label'=>'员工列表', 'url'=>array('index')),
-		array('label'=>'创建员工', 'url'=>array('create'))
+		array('label'=>'员工列表', 'url'=>array('/employee/index')),
+		array('label'=>'创建员工', 'url'=>array('/employee/create'))
 	);
 
 	/**
