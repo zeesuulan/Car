@@ -3,9 +3,9 @@
 /* @var $model Member */
 
 $this->breadcrumbs=array(
-	'Members'=>array('index'),
+	'会员管理'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'修改会员信息',
 );
 
 $this->menu=array(

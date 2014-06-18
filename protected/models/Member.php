@@ -46,7 +46,7 @@ class Member extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			"origin_id" => array(self::BELONGS_TO, 'MemberOrigin', 'id')
+			"origin_name" => array(self::BELONGS_TO, 'MemberOrigin', 'origin_id', 'select'=>"name")
 		);
 	}
 
@@ -60,7 +60,7 @@ class Member extends CActiveRecord
 			'member_num' => '会员卡号',
 			'password' => '密码',
 			'dl_id' => '驾驶证',
-			'origin_id' => '用户渠道',
+			'origin_name.name' => '用户渠道',
 		);
 	}
 

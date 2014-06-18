@@ -3,8 +3,8 @@
 /* @var $model Member */
 
 $this->breadcrumbs=array(
-	'Members'=>array('index'),
-	$model->id,
+	'会员管理'=>array('index'),
+	$model->dl_id,
 );
 ?>
 
@@ -14,6 +14,6 @@ $this->breadcrumbs=array(
 		'id',
 		'member_num',
 		'dl_id',
-		'origin_id',
+		'origin_name.name',
 	),
 )); ?>

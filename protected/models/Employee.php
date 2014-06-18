@@ -42,7 +42,7 @@ class Employee extends CActiveRecord
 	public function relations()
     {
         return array(
-            'store'=>array(self::BELONGS_TO, 'Store', 'store_id')
+            'store'=>array(self::BELONGS_TO, 'Store', 'store_id', 'select'=>'name')
         );
     }
 

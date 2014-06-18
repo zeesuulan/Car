@@ -4,9 +4,6 @@
 
     <?php $form=$this->beginWidget('CActiveForm', array( 'id'=>'member-form', 'enableAjaxValidation'=>false)); ?>
 
-    <p class="note">Fields with
-        <span class="required">*</span>are required.</p>
-
     <?php echo $form->errorSummary($model); ?>
 
     <div class="form-group">
@@ -32,7 +29,7 @@
         <?php echo $form->dropDownList($model, 'origin_id', $origin_list); ?>
         <?php echo $form->error($model,'origin_id'); ?>
     </div>
-
+    <p class="note">带<span class="required">*</span>号必填</p>
     <div class="form-group buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? '激活' : '修改'); ?>
     </div>

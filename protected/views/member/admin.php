@@ -3,7 +3,7 @@
 /* @var $model Member */
 
 $this->breadcrumbs=array(
-	'Members'=>array('index'),
+	'会员管理'=>array('index'),
 	'Manage',
 );
 

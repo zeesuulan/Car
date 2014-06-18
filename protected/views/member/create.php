@@ -1,8 +1,8 @@
-<?php
-/* @var $this MemberController */
-/* @var $model Member */
+<?php 
+	$this->breadcrumbs=array(
+		'会员管理'=>array('index'),
+		'激活会员',
+	);
 
-
-?>
-
-<?php $this->renderPartial('_form', array('model'=>$model,'origin_list' =>$origin_list)); ?>
+	$this->renderPartial('_form', array('model'=>$model,'origin_list' =>$origin_list));
+ ?>
