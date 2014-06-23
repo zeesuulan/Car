@@ -4,18 +4,12 @@
 
 $this->breadcrumbs=array(
 	'会员管理'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'修改会员信息',
+	$dl_model->name=>array('view','id'=>$model->id),
+	'更新会员 '.$dl_model->name.' 信息',
 );
 
-$this->menu=array(
-	array('label'=>'List Member', 'url'=>array('index')),
-	array('label'=>'Create Member', 'url'=>array('create')),
-	array('label'=>'View Member', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Member', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Update Member <?php echo $model->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+
+<?php $this->renderPartial('_form', array('model'=>$model,'dl_model'=>$dl_model,'origin_list' =>$origin_list, 'dlevel_list' => $dlevel_list)); ?>

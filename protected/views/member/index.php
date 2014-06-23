@@ -28,7 +28,15 @@
         </div>
     </form>
 </div>
-<?php $this->widget('zii.widgets.CListView', array( 'dataProvider'=>$dataProvider, 'itemView'=>'_view', )); ?>
+<?php $this->widget('zii.widgets.CListView', array(
+    'dataProvider'=>$dataProvider,
+    'ajaxUpdate'=>false,
+    'template'=>'{sorter}{pager}{items}{summary}',
+    'itemView'=>'_list',
+    'pager'=>array(  
+                'maxButtonCount'=>'7',  
+                )
+)); ?>
 <ul class="pagination">
     <li><a href="#">&laquo;</a>
     </li>

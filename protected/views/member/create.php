@@ -4,5 +4,5 @@
 		'激活会员',
 	);
 
-	$this->renderPartial('_form', array('model'=>$model,'origin_list' =>$origin_list));
+	$this->renderPartial('_form', array('model'=>$model,'dl_model'=>$dl_model,'origin_list' =>$origin_list, 'dlevel_list' => $dlevel_list));
  ?>

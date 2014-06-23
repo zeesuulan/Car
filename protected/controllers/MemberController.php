@@ -56,8 +56,10 @@ class MemberController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$dlInfo = Dl::model()->find("id=:id", array(":id"=>$this->loadModel($id)->dl_id));
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'dlInfo' => $dlInfo
 		));
 	}
 
@@ -67,25 +69,43 @@ class MemberController extends Controller
 	 */
 	public function actionCreate()
 	{
+
 		$model=new Member;
 		$origin_model = new MemberOrigin;
+		$dl_model = new Dl;
+		
+
+
 		$origin_list = array();
 		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
 			$origin_list[$_model->attributes['id']] = $_model->attributes['name'];
 		}
+
+		$dlevel_model = new DlLevel;
+		$dlevel_list = array();
+		foreach($dlevel_model->findAll(array("select"=>"id, name")) as $_model) {
+			$dlevel_list[$_model->attributes['id']] = $_model->attributes['name'];
+		}
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Member']))
+		if(isset($_POST['Member']) && isset($_POST['Dl']))
 		{
 			$model->attributes=$_POST['Member'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$dl_model->attributes=$_POST['Dl'];
+			if($dl_model->save()) {	//保存驾驶证数据
+				$model->dl_id = $dl_model->id; //返回驾驶证id，保存在用户数据中
+				if($model->save()){
+					$this->redirect(array('view','id'=>$model->id));
+				}
+			}
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
-			'origin_list' =>$origin_list
+			'dl_model'=>$dl_model,
+			'origin_list' =>$origin_list,
+			'dlevel_list' => $dlevel_list
 		));
 	}
 
@@ -97,9 +117,17 @@ class MemberController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$origin_model = new MemberOrigin;
+
+		$dlInfo = Dl::model()->find("id=:id", array(":id"=>$model->dl_id));
+
+		$origin_list = array();
+		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
+			$origin_list[$_model->attributes['id']] = $_model->attributes['name'];
+		}
 
 		$this->performAjaxValidation($model);
-
+		
 		if(isset($_POST['Member']))
 		{
 			$model->attributes=$_POST['Member'];
@@ -107,8 +135,21 @@ class MemberController extends Controller
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
+		if($dlInfo == NULL) {
+			$this->redirect(array('view','id'=>$model->id));
+		}
+
+		$dlevel_model = new DlLevel;
+		$dlevel_list = array();
+		foreach($dlevel_model->findAll(array("select"=>"id, name")) as $_model) {
+			$dlevel_list[$_model->attributes['id']] = $_model->attributes['name'];
+		}
+
 		$this->render('update',array(
 			'model'=>$model,
+			'dl_model'=> $dlInfo,
+			'origin_list' =>$origin_list,
+			'dlevel_list' => $dlevel_list
 		));
 	}
 
@@ -132,11 +173,9 @@ class MemberController extends Controller
 	public function actionIndex()
 	{
 		$criteria = new CDbCriteria;
-		$criteria->select = "id, member_num, origin_id, dl_id";
 		$dataProvider=new CActiveDataProvider('Member', array(
-			"criteria" => $criteria,
 			'sort'=>array( 
-	            'defaultOrder'=>'id ASC', 
+	            'defaultOrder'=>'id DESC', 
 	        ), 
 	        'pagination'=>array( 
 	            'pageSize'=>5 
