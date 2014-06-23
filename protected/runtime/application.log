@@ -1211,3 +1211,25 @@ Stack trace:
 REQUEST_URI=/member/index.html
 HTTP_REFERER=http://car.com/member/10.html
 ---
+2014/06/23 17:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "booking" 动作.' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/member/create
+---
+2014/06/23 17:52:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "booking" 动作.' in E:\project\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\project\yii\framework\web\CController.php(270): CController->missingAction('booking')
+#1 E:\project\yii\framework\web\CWebApplication.php(282): CController->run('booking')
+#2 E:\project\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/booking')
+#3 E:\project\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\project\car\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/booking
+HTTP_REFERER=http://car.com/site
+---
