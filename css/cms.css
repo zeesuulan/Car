@@ -3,3 +3,5 @@ body{background:#eee;font-family:"微软雅黑"}h1,h2,h3,h4,h5,h6,h7{font-family
 .info_title{font-size: 34px; padding: 0 10px; color: orange;}
 .search_form{width: 500px;padding-top: 20px;}
 .abs{position: absolute;}
+.form-group.buttons{margin-left:0;}
+.form-group.buttons input{width: 100px;}

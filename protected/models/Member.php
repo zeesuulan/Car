@@ -34,7 +34,7 @@ class Member extends CActiveRecord
 			array('password', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, member_num, dl_id, origin_id', 'safe', 'on'=>'search'),
+			array('id, member_num, dl_id, origin_id, origin_name', 'safe', 'on'=>'search'),
 		);
 	}
 

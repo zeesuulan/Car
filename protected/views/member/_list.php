@@ -3,6 +3,6 @@
 	'attributes'=>array(
 		'dlInfo.name',
 		'member_num',
+		'origin_name.name'
 	),
 )); ?>
-//todo 用户名增加链接，直接跳到用户信息页面

@@ -7,10 +7,11 @@ class MemberController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/cmspage';
-
+	public $origin_list;
 	public $menu=array(
 		array('label'=>'会员列表', 'url'=>array('index')),
-		array('label'=>'激活会员', 'url'=>array('create'))
+		array('label'=>'激活会员', 'url'=>array('create')),
+		array('label'=>'管理会员', 'url'=>array('admin'))
 	);
 
 	/**
@@ -63,6 +64,15 @@ class MemberController extends Controller
 		));
 	}
 
+	public function init(){
+		$model=new Member;
+		$origin_model = new MemberOrigin;
+		$this->origin_list = array();
+		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
+			$this->origin_list[$_model->attributes['id']] = $_model->attributes['name'];
+		}
+	}
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -73,13 +83,6 @@ class MemberController extends Controller
 		$model=new Member;
 		$origin_model = new MemberOrigin;
 		$dl_model = new Dl;
-		
-
-
-		$origin_list = array();
-		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
-			$origin_list[$_model->attributes['id']] = $_model->attributes['name'];
-		}
 
 		$dlevel_model = new DlLevel;
 		$dlevel_list = array();
@@ -104,7 +107,7 @@ class MemberController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 			'dl_model'=>$dl_model,
-			'origin_list' =>$origin_list,
+			'origin_list' =>$this->origin_list,
 			'dlevel_list' => $dlevel_list
 		));
 	}
@@ -121,9 +124,9 @@ class MemberController extends Controller
 
 		$dlInfo = Dl::model()->find("id=:id", array(":id"=>$model->dl_id));
 
-		$origin_list = array();
+		$this->origin_list = array();
 		foreach($origin_model->findAll(array("select"=>"id, name")) as $_model) {
-			$origin_list[$_model->attributes['id']] = $_model->attributes['name'];
+			$this->origin_list[$_model->attributes['id']] = $_model->attributes['name'];
 		}
 
 		$this->performAjaxValidation($model);
@@ -148,7 +151,7 @@ class MemberController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 			'dl_model'=> $dlInfo,
-			'origin_list' =>$origin_list,
+			'origin_list' =>$this->origin_list,
 			'dlevel_list' => $dlevel_list
 		));
 	}
@@ -198,6 +201,7 @@ class MemberController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'origin_list' =>$this->origin_list,
 		));
 	}
 

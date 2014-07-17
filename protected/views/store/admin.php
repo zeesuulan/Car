@@ -53,6 +53,6 @@ $(function() {
     $("label").addClass("control-label col-sm-2")
     $("form").addClass("form-horizontal")
     $(".row").addClass("form-group")
-    $("select").addClass("form-control").css({"width": "20%", "display":"inline-block", "margin-left":"20px"})
+    $("select").addClass("form-control").css({"width": "20%", "display":"inline-block", "margin-left":"15px"})
 })
 </script>

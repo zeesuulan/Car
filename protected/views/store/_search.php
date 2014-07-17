@@ -25,9 +25,7 @@
 	</div>
 
 	<div class="form-group buttons">
-		<div class="col-sm-offset-2 col-sm-10">
-			<?php echo CHtml::submitButton('搜索'); ?>
-		</div>
+		<?php echo CHtml::submitButton('搜索'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
