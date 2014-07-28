@@ -3,25 +3,12 @@
 /* @var $model Notice */
 
 $this->breadcrumbs=array(
-	'Notices'=>array('index'),
-	$model->id,
-);
-
-$this->menu=array(
-	array('label'=>'List Notice', 'url'=>array('index')),
-	array('label'=>'Create Notice', 'url'=>array('create')),
-	array('label'=>'Update Notice', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Notice', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Notice', 'url'=>array('admin')),
+	'公告'=>array('index'),
+	$model->title.' 的详细信息',
 );
 ?>
 
-<h1>View Notice #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->title; ?></h1>
+<pre><?php echo $model->content; ?></pre>
+<a href="<?=$this->createUrl("notice/update",array("id"=>$model->id))?>">修改此公告</a>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'content',
-	),
-)); ?>

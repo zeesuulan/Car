@@ -3,16 +3,13 @@
 /* @var $model Notice */
 
 $this->breadcrumbs=array(
-	'Notices'=>array('index'),
-	'Create',
+	'公告'=>array('index'),
+	'创建公告',
 );
 
-$this->menu=array(
-	array('label'=>'List Notice', 'url'=>array('index')),
-	array('label'=>'Manage Notice', 'url'=>array('admin')),
-);
+
 ?>
 
-<h1>Create Notice</h1>
+<h1>创建公告</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

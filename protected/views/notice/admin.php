@@ -3,13 +3,8 @@
 /* @var $model Notice */
 
 $this->breadcrumbs=array(
-	'Notices'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Notice', 'url'=>array('index')),
-	array('label'=>'Create Notice', 'url'=>array('create')),
+	'公告'=>array('index'),
+	'管理公告',
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,14 +21,13 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Notices</h1>
+<h1>管理公告</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+可以通过表格中的输入快速搜索想要找的数据信息
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('高级搜索','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -45,10 +39,20 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		'title',
 		'content',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
 )); ?>
+<script type="text/javascript">
+$(function() {
+    $("input").addClass("form-control")
+    $("input[type=submit]").removeClass("form-control").addClass("btn btn-default")
+    $("label").addClass("control-label col-sm-2")
+    $("form").addClass("form-horizontal")
+    $(".row").addClass("form-group")
+    $("select").addClass("form-control").css({"width": "20%", "display":"inline-block", "margin-left":"15px"})
+})
+</script>

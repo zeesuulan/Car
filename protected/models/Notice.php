@@ -25,11 +25,11 @@ class Notice extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('content', 'required'),
+			array('content,title', 'required'),
 			array('content', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, content', 'safe', 'on'=>'search'),
+			array('content,title', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,6 +52,7 @@ class Notice extends CActiveRecord
 		return array(
 			'id' => '公告ID',
 			'content' => '公告内容',
+			'title' => '标题',
 		);
 	}
 
@@ -75,6 +76,7 @@ class Notice extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('content',$this->content,true);
+		$criteria->compare('title',$this->title,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

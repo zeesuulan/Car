@@ -4,31 +4,37 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="form col-sm-8 col-sm-offset-2">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'notice-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
 	<?php echo $form->errorSummary($model); ?>
+	<div class="form-group clearfix">
+		<?php echo $form->labelEx($model,'title'); ?>
+        <?php echo $form->textField($model,'title',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'title'); ?>
+	</div>
 
-	<div class="row">
+	<div class="form-group clearfix">
 		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo $form->textField($model,'content',array('size'=>60,'maxlength'=>255)); ?>
+        <?php echo $form->textArea($model,'content',array('rows'=>10)); ?>
 		<?php echo $form->error($model,'content'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? '保存' : '修改'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<script type="text/javascript">
+$(function() {
+    $("input").addClass("form-control")
+    $("textarea").addClass("form-control")
+    $("input[type=submit]").removeClass("form-control").addClass("btn btn-default")
+    $("label").addClass("control-label")
+})
+</script>

@@ -7,7 +7,11 @@ class NoticeController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/cmspage';
-
+	public $menu=array(
+		// array('label'=>'会员列表', 'url'=>array('index')),
+		array('label'=>'创建公告', 'url'=>array('/notice/create')),
+		array('label'=>'公告列表', 'url'=>array('/notice/admin'))
+	);
 	/**
 	 * @return array action filters
 	 */

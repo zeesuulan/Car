@@ -9,7 +9,7 @@ class MemberController extends Controller
 	public $layout='//layouts/cmspage';
 	public $origin_list;
 	public $menu=array(
-		array('label'=>'会员列表', 'url'=>array('index')),
+		// array('label'=>'会员列表', 'url'=>array('index')),
 		array('label'=>'激活会员', 'url'=>array('create')),
 		array('label'=>'管理会员', 'url'=>array('admin'))
 	);
