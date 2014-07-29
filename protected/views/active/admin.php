@@ -1,10 +1,10 @@
 <?php
-/* @var $this NoticeController */
-/* @var $model Notice */
+/* @var $this ActiveController */
+/* @var $model Active */
 
 $this->breadcrumbs=array(
-	'公告管理'=>array('index'),
-	'公告管理',
+	'活动管理'=>array('index'),
+	'活动管理',
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -13,7 +13,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#notice-grid').yiiGridView('update', {
+	$('#active-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -21,7 +21,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>管理公告</h1>
+<h1>活动管理s</h1>
 
 <p>
 可以通过表格中的输入快速搜索想要找的数据信息
@@ -35,12 +35,13 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'notice-grid',
+	'id'=>'active-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'title',
 		'content',
+		'member_price',
+		'non_member_price',
 		array(
 			'class'=>'CButtonColumn',
 		),

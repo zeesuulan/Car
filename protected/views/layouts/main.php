@@ -22,7 +22,7 @@
         <ul class="nav nav-pills">
             <span class="navbar-brand">
                 <?php echo CHtml::encode(Yii::app()->name); ?></span>
-            <?php $this->widget('application.widgets.CBNav', array('items' => array(array('label' => '首页', 'url' => array('/site')), array('label' => '管理预约', 'url' => array('/site/booking', 'view' => 'about')),array('label' => '会员管理', 'url' => array('/member/create')), array('label' => '员工管理', 'url' => array('/employee/admin')), array('label' => '店面管理', 'url' => array('/store/admin')), array('label' => '公告管理', 'url' => array('/notice')),array('label' => '退出 ('.Yii::app() -> user -> name.')', 'url' => array('/site/employee'))))); ?>
+            <?php $this->widget('application.widgets.CBNav', array('items' => array(array('label' => '首页', 'url' => array('/site')), array('label' => '管理预约', 'url' => array('/site/booking', 'view' => 'about')),array('label' => '会员管理', 'url' => array('/member/create')), array('label' => '员工管理', 'url' => array('/employee/admin')), array('label' => '店面管理', 'url' => array('/store/admin')), array('label' => '公告管理', 'url' => array('/notice/admin')), array('label' => '活动管理', 'url' => array('/active/admin')),array('label' => '退出 ('.Yii::app() -> user -> name.')', 'url' => array('/site/employee'))))); ?>
         </ul>
         <?php $this->widget('application.widgets.CBSiderNav', array( 'items'=>$this->menu )); ?>
         <div class="main_container clearfix">
