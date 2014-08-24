@@ -2,7 +2,7 @@
 
 class SiteController extends Controller
 {
-	public $layout='//layouts/cmspage';
+	public $layout='//layouts/index';
 	
 	/**
 	 * Declares class-based actions.
@@ -61,11 +61,10 @@ class SiteController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
 		// collect user input data
-		if(isset($_POST['LoginForm']))
+		if(isset($_GET['LoginForm']))
 		{
-			$model->attributes=$_POST['LoginForm'];
+			$model->attributes=$_GET['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
 				$this->redirect(Yii::app()->user->returnUrl);

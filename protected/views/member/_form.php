@@ -1,4 +1,4 @@
-<?php /* @var $this MemberController */ /* @var $model Member */ /* @var $form CActiveForm */ ?>
+
 
 <div class="form col-sm-6 col-sm-offset-3">
 
